@@ -1,0 +1,282 @@
+:root {
+    /* Цветовая палитра */
+    --main-text-color: #000000;
+    --secondary-text-color: #595959;
+    --light-text-color: #a8a8a8;
+    --accent-color: #fb6d3a;
+    --left-section-bg: #1e2939;
+    --main-bg: #ffffff;
+    --body-bg: #f5f7fa;
+
+    /* Шрифты */
+    --main-font: Montserrat, sans-serif;
+}
+
+.body_container {
+    /* Исправлена опечатка 'bodi' на 'body' */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1280px;
+    height: auto;
+    background: var(--body-bg);
+}
+
+.main_container {
+    background: var(--main-bg);
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: auto;
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    /* Использован числовой вес вместо 'normal' */
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 30px;
+    color: var(--main-text-color);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Общие стили для заголовков */
+h1,
+h2,
+h3,
+p {
+    padding: 0;
+    padding-left: 40px;
+    /* width: 700; - Это сомнительное правило, лучше не задавать ширину общим тегам */
+}
+
+/* Стили для H1 */
+h1 {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-shadow: 6px 6px 12px rgba(128, 128, 128, 0.452);
+    font-size: 45px;
+    line-height: 54.84px;
+    /* Исправлен синтаксис (запятая на точку) */
+    color: var(--main-text-color);
+}
+
+/* Стили для H2 */
+h2 {
+    color: var(--secondary-text-color);
+    padding-top: 0;
+    padding-bottom: 10px;
+    font-size: 22px;
+    line-height: 26.82px;
+    /* Исправлен синтаксис (запятая на точку) */
+    text-shadow: 4px 4px 8px rgba(128, 128, 128, 0.452);
+}
+
+/* Стили для H3 */
+h3 {
+    color: #8a94a3;
+    padding-top: 0;
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 19.5px;
+    /* Исправлен синтаксис (запятая на точку) */
+    text-shadow: 3px 3px 6px rgba(128, 128, 128, 0.452);
+}
+
+/* Стили для списков */
+ul,
+ol {
+    margin-left: 20px;
+}
+
+ol {
+    font-weight: bold;
+    text-shadow: 3px 3px 6px lightgrey;
+}
+
+/* Стили для блока details/summary */
+.details_my {
+    margin-left: 40px;
+}
+
+details {
+    font-weight: 400;
+    color: var(--light-text-color);
+}
+
+.sum,
+.sum_P {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--main-text-color);
+}
+
+.sum {
+    text-align: right;
+    display: block;
+    /* Убеждаемся, что span с right-align занимает всю ширину */
+}
+
+/*=======left-section=======*/
+.MY_img {
+    /* image-rendering: optimizeQuality; - Не всегда нужно, но оставим */
+    width: 300px;
+    height: auto;
+    margin: 35px auto auto 35px;
+    box-shadow: 6px 6px 20px rgba(255, 255, 255, 0.103);
+}
+
+.left_section {
+    background: var(--left-section-bg);
+    color: var(--main-bg);
+    width: 370px;
+}
+
+.left_block_h2 {
+    margin-left: 40px;
+    margin-right: auto;
+    color: var(--main-bg);
+    /* Заголовки в левом блоке белые */
+}
+
+/* Группировка стилей для блоков в левой секции */
+.Contacts_block,
+.Tech_Skills_block,
+.Soft_Skills_block {
+    margin-top: 50px;
+}
+
+.Soft_Skills_block {
+    margin-top: 45px;
+}
+
+.orange-punkt {
+    color: var(--accent-color);
+    margin-left: 55px;
+}
+
+.skills-text {
+    color: var(--main-bg);
+    font-weight: 100;
+}
+
+.set-link {
+    color: #8a94a3;
+    font-weight: 400;
+    padding: 5px;
+}
+
+/*======right_section=======*/
+.right_section {
+    width: 830px;
+}
+
+/* Группировка стилей для рабочих блоков */
+.about_me_block,
+.Projects_block,
+.Work_1_block,
+.Work_2_block,
+.Work_3_block,
+.Education_block {
+    padding: 0;
+    margin-left: 40px;
+    font-weight: 400;
+}
+
+.about_me_block {
+    margin-top: 90px;
+    height: auto;
+}
+
+.about_me_P {
+    width: 525px;
+}
+
+.about_me_S {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--light-text-color);
+}
+
+/* Стили для блока Projects */
+.Projects_block {
+    /* Убраны дублирующиеся свойства шрифтов */
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--secondary-text-color);
+    height: auto;
+}
+
+.Projects_block_link {
+    color: var(--secondary-text-color);
+    font-weight: 400;
+}
+
+.Projects_block_bracket {
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+
+.Projects_block_text {
+    color: var(--secondary-text-color);
+    font-weight: 400;
+}
+
+/* Стили для Work Experience */
+.Work_1_block {
+    margin-top: 50px;
+}
+
+.Work_2_block {
+    margin-top: 21px;
+}
+
+.Work_3_block {
+    margin-top: 20px;
+}
+
+.Work_1_color,
+.Work_2_color,
+.Work_3_color {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--accent-color);
+}
+
+/* Стили для Education */
+.Education_block {
+    margin-top: 50px;
+    height: auto;
+}
+
+.Education_set {
+    /* Убрана дублирующаяся настройка шрифтов и линий */
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 60px;
+    font-size: 16px;
+    line-height: 19.5px;
+    font-weight: 700;
+}
+
+.data_set {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 40px;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--light-text-color);
+}
+
+.divider {
+    color: var(--main-text-color);
+}

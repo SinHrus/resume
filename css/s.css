@@ -1,0 +1,385 @@
+/*
+ * 1. Сброс стилей (Reset/Normalize)
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+ * 2. Основные стили (body, шрифты, контейнеры)
+ */
+body {
+    background-color: #f0f0f0;
+    /* Светлый основной фон */
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    /* Темно-серый цвет текста */
+    line-height: 1.6;
+    padding: 40px 0;
+}
+
+.body_container {
+    max-width: 1200px;
+    /* Ограничение максимальной ширины */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main_container {
+    background-color: #ffffff;
+    /* Белый фон для самого резюме */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* Flexbox для организации боковой и основной секций */
+    border-radius: 10px;
+    overflow: hidden;
+    /* Важно для border-radius */
+}
+
+/*
+ * 3. Стили для контейнеров и секций
+ */
+
+/* 4. Стили для левой секции (.left_section - Боковая панель) */
+.left_section {
+    background-color: #33415c;
+    /* Глубокий синий/темный акцентный цвет */
+    color: #ffffff;
+    /* Белый текст на темном фоне */
+    padding: 40px 30px;
+    flex: 0 0 350px;
+    /* Фиксированная ширина для боковой панели */
+}
+
+.MY_img {
+    width: 100%;
+    /* Заполнение ширины контейнера */
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    /* Круглая фотография */
+    border: 5px solid #5d7398;
+    /* Светлая рамка */
+}
+
+.wrapper_aside {
+    max-width: 300px;
+    /* Ограничение максимальной ширины */
+    margin: 0 auto;
+}
+
+.left_block_h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #5d7398;
+    /* Разделитель */
+    text-transform: uppercase;
+}
+
+/* Стили для списков (Tech Skills, Soft Skills) */
+.orange-punkt {
+    list-style: none;
+    /* Убираем стандартные маркеры */
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.orange-punkt li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.orange-punkt li::before {
+    content: '•';
+    /* Собственный маркер (точка или кружок) */
+    color: #fca311;
+    /* Оранжевый акцентный цвет */
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+}
+
+.skills-text {
+    font-size: 14px;
+}
+
+/* Стили для контактов */
+.set-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: right;
+}
+
+.set-link:hover {
+    color: #fca311;
+
+}
+
+/*
+ * 5. Стили для правой секции (.right_section - Основной контент)
+ */
+.right_section {
+    padding: 40px 50px;
+    flex-grow: 1;
+    /* Занимает оставшееся пространство */
+}
+
+h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #33415c;
+    /* Акцентный цвет для заголовков секций */
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+.about_me_block {
+    margin-bottom: 40px;
+}
+
+.about_me_block h3 {
+    font-weight: 400;
+    /* Должность - менее жирно */
+    color: #fca311;
+    /* Оранжевый цвет для должности */
+    margin-bottom: 5px;
+}
+
+.about_me_P {
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Стили для details/summary в секции "Обо мне" */
+.details_my {
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.about_me_S {
+    cursor: pointer;
+    font-weight: 700;
+    color: #33415c;
+    transition: color 0.3s;
+}
+
+.details_my[open] .about_me_S {
+    color: #fca311;
+}
+
+.details_my img {
+    max-width: 100px;
+    height: auto;
+    margin: 5px;
+    border-radius: 3px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.details_my img:hover {
+    opacity: 1;
+}
+
+
+/* Секция Проекты */
+.Projects_block ol {
+    padding-left: 20px;
+}
+
+.Projects_block li {
+    margin-bottom: 10px;
+}
+
+.Projects_block_link {
+    color: #33415c;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.Projects_block_link:hover {
+    color: #fca311;
+    text-decoration: underline;
+}
+
+.Projects_block_text {
+    color: #555555;
+    font-size: 14px;
+}
+
+.Projects_block_bracket {
+    color: #33415c;
+    font-weight: 700;
+}
+
+
+/* Секция Опыт работы */
+.Work_Experience_container {
+    margin-bottom: 40px;
+}
+
+.Work_Experience_container article {
+    margin-bottom: 30px;
+}
+
+.Work_1_color, .Work_2_color, .Work_3_color {
+    color: #fca311;
+    /* Акцентный цвет для названия компании/типа занятости */
+    font-weight: 700;
+}
+
+.data_set {
+    color: #888888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.divider {
+    color: #33415c;
+    margin: 0 8px;
+    font-weight: 700;
+}
+
+/* Стили для details/summary в опыте работы */
+.Work_Experience_container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.Work_Experience_container li {
+    margin-bottom: 10px;
+    border-left: 3px solid #fca311;
+    /* Оранжевая полоса слева */
+    padding-left: 15px;
+}
+
+.sum {
+    cursor: pointer;
+    font-weight: 600;
+    color: #333333;
+    transition: color 0.3s;
+}
+
+.sum:hover {
+    color: #fca311;
+}
+
+.sum_P {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555555;
+}
+
+.sum_P img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Секция Образование */
+.Education_block {
+    margin-bottom: 0;
+}
+
+.Education_set {
+    font-weight: 700;
+    color: #33415c;
+}
+
+.Education_block h3:nth-child(3) {
+    font-weight: 400;
+    font-style: italic;
+    color: #555555;
+}
+
+
+/*
+ * 6. Медиа-запросы для адаптивности (начиная с планшетов и меньше)
+ */
+@media (max-width: 992px) {
+    .main_container {
+        flex-direction: column;
+        /* Боковая панель переходит наверх */
+    }
+.main_container {
+        width: 640px;
+    }
+    .left_section {
+        flex: auto;
+        /* Убираем фиксированную ширину */
+        padding: 30px 20px;
+    }
+
+    .right_section {
+        padding: 30px 20px;
+    }
+
+    .MY_img {
+        max-width: 180px;
+        /* Уменьшаем фото на мобильных */
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 0;
+    }
+
+    .main_container {
+        box-shadow: none;
+        /* Убираем тень на узких экранах */
+        border-radius: 0;
+    }
+
+    .left_section {
+        text-align: center;
+    }
+
+    .left_block_h2 {
+        text-align: left;
+        /* Вернуть заголовки влево */
+    }
+
+    .orange-punkt {
+        text-align: left;
+    }
+
+    .MY_img {
+        margin-bottom: 20px;
+    }
+}

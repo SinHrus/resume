@@ -1,0 +1,422 @@
+/*
+ * 1. Mobile First - Базовые стили (для экранов < 768px)
+ * Все в одну колонку. Фото 80% ширины.
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    padding: 20px 0;
+}
+
+.body_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* На мобильных: Одна колонка, без тени/скруглений */
+.main_container {
+    background-color: #ffffff;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+/* Секция ASIDE (Левая) */
+.left_section {
+    background-color: #33415c;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    /* Центрируем фото и текст */
+}
+
+/* Контейнер для группировки (на мобильных он пока не используется для flex) */
+.for_flex {
+    margin-bottom: 20px;
+}
+
+.MY_img {
+    width: 80%;
+    /* Фото на ширину контейнера */
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 5px solid #5d7398;
+}
+
+/* Контакты, Навыки - вертикальное расположение по умолчанию */
+.Contacts_block, .Tech_Skills_block, .Soft_Skills_block {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.left_block_h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #5d7398;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.orange-punkt {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.orange-punkt li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.orange-punkt li::before {
+    content: '•';
+    color: #fca311;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+}
+
+.skills-text {
+    font-size: 14px;
+}
+
+.set-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.set-link:hover {
+    color: #fca311;
+}
+
+/* Секция RIGHT (Правая) */
+.right_section {
+    padding: 30px 20px;
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #33415c;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+/* ... Стили для правой секции (Projects, Work, Education) без изменений ... */
+
+.about_me_block {
+    margin-bottom: 40px;
+}
+
+.about_me_block h3 {
+    font-weight: 400;
+    color: #fca311;
+    margin-bottom: 5px;
+}
+
+.about_me_P {
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.details_my {
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.about_me_S {
+    cursor: pointer;
+    font-weight: 700;
+    color: #33415c;
+    transition: color 0.3s;
+}
+
+.details_my[open] .about_me_S {
+    color: #fca311;
+}
+
+.details_my div {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: 10px;
+}
+
+.details_my img {
+    max-width: 80px;
+    height: auto;
+    margin: 5px;
+    border-radius: 3px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    display: inline-block;
+}
+
+.details_my img:hover {
+    opacity: 1;
+}
+
+.Projects_block ol {
+    padding-left: 20px;
+}
+
+.Projects_block li {
+    margin-bottom: 10px;
+}
+
+.Projects_block_link {
+    color: #33415c;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.Projects_block_link:hover {
+    color: #fca311;
+    text-decoration: underline;
+}
+
+.Projects_block_text {
+    color: #555555;
+    font-size: 14px;
+}
+
+.Projects_block_bracket {
+    color: #33415c;
+    font-weight: 700;
+}
+
+.Work_Experience_container {
+    margin-bottom: 40px;
+}
+
+.Work_Experience_container article {
+    margin-bottom: 30px;
+}
+
+.Work_1_color, .Work_2_color, .Work_3_color {
+    color: #fca311;
+    font-weight: 700;
+}
+
+.data_set {
+    color: #888888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.divider {
+    color: #33415c;
+    margin: 0 8px;
+    font-weight: 700;
+}
+
+.Work_Experience_container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.Work_Experience_container li {
+    margin-bottom: 10px;
+    border-left: 3px solid #fca311;
+    padding-left: 15px;
+}
+
+.sum {
+    cursor: pointer;
+    font-weight: 600;
+    color: #333333;
+    transition: color 0.3s;
+}
+
+.sum:hover {
+    color: #fca311;
+}
+
+.sum_P {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555555;
+}
+
+.sum_P img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.Education_block {
+    margin-bottom: 0;
+}
+
+.Education_set {
+    font-weight: 700;
+    color: #33415c;
+}
+
+.Education_block h3:nth-child(3) {
+    font-weight: 400;
+    font-style: italic;
+    color: #555555;
+}
+
+
+/*
+ * 2. ПЛАНШЕТНЫЙ РЕЖИМ (Media Query: min-width: 768px)
+ * Главный макет: ОДНА КОЛОНКА (left_section над right_section)
+ * left_section (aside): ДВЕ КОЛОНКИ (Flexbox в .for_flex)
+ */
+@media (min-width: 768px) {
+    .body_container {
+        padding: 0 20px;
+    }
+
+    .main_container {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        /* flex-direction: column; — остается по умолчанию с мобильной версии */
+    }
+
+    .left_section {
+        padding: 40px 30px;
+        text-align: left;
+    }
+
+    /* Активация двухколоночного макета внутри aside через .for_flex */
+    .for_flex {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 30px;
+        align-items: flex-start;
+        width: 100%;
+        text-align: left;
+        /* Важно для текста */
+    }
+
+    /* 1. Фото (40%) + Контакты (60%) */
+    .for_flex:first-child .MY_img {
+        width: 40%;
+        max-width: none;
+        /* Не фиксированная */
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .for_flex:first-child .Contacts_block {
+        width: 60%;
+        margin-bottom: 0;
+        flex-grow: 1;
+    }
+
+    .for_flex:first-child .left_block_h2 {
+        margin-top: 0;
+    }
+
+    /* 2. Tech Skills (50%) + Soft Skills (50%) */
+    .Tech_Skills_block, .Soft_Skills_block {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    /* Фото внутри details */
+    .details_my img {
+        max-width: 100px;
+    }
+
+    .right_section {
+        padding: 40px 30px;
+    }
+}
+
+
+/*
+ * 3. ДЕСКТОПНЫЙ РЕЖИМ (Media Query: min-width: 992px)
+ * Главный макет: ДВЕ КОЛОНКИ (left_section слева, right_section справа)
+ * left_section (aside): ОДНА КОЛОНКА (элементы идут вертикально)
+ */
+@media (min-width: 992px) {
+    .main_container {
+        flex-direction: row;
+        /* Главное изменение: 2 основные колонки */
+    }
+
+    .left_section {
+        flex: 0 0 350px;
+        /* Фиксированная ширина для боковой панели */
+        padding: 40px 30px;
+    }
+
+    /* Отключаем Flexbox для aside и возвращаем элементы вертикально */
+    .for_flex {
+        display: block;
+        /* Снова одна колонка */
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .MY_img {
+        width: 100%;
+        /* Фото на 100% ширины aside */
+        max-width: 250px;
+        /* Ограничиваем, чтобы не растягивалось */
+        margin: 0 auto 30px;
+        display: block;
+    }
+
+    /* Контакты, Навыки - снова вертикально */
+    .Contacts_block, .Tech_Skills_block, .Soft_Skills_block {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .right_section {
+        padding: 40px 50px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+}
